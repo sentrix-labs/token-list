@@ -1,0 +1,49 @@
+{
+  "name": "Sentrix Default",
+  "logoURI": "https://raw.githubusercontent.com/sentrix-labs/brand-kit/main/exchange/tokenlist-256.png",
+  "keywords": ["sentrix", "default", "evm", "rust l1"],
+  "timestamp": "2026-05-12T07:00:00.000Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {
+    "native": {
+      "name": "Native asset",
+      "description": "Chain native gas token, not an ERC20 contract."
+    },
+    "wrapped": {
+      "name": "Wrapped native",
+      "description": "Canonical WETH pattern wrapper of the native asset."
+    },
+    "stablecoin": {
+      "name": "Stablecoin",
+      "description": "Token whose value is pegged to a fiat currency."
+    },
+    "bridged": {
+      "name": "Bridged asset",
+      "description": "Token representing an asset bridged from another chain."
+    }
+  },
+  "tokens": [
+    {
+      "chainId": 7119,
+      "address": "0x4693b113e523A196d9579333c4ab8358e2656553",
+      "name": "Wrapped SRX",
+      "symbol": "WSRX",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/sentrix-labs/brand-kit/main/exchange/tokenlist-256.png",
+      "tags": ["wrapped"]
+    },
+    {
+      "chainId": 7120,
+      "address": "0x85d5E7694AF31C2Edd0a7e66b7c6c92C59fF949A",
+      "name": "Wrapped SRX (Testnet)",
+      "symbol": "WSRX",
+      "decimals": 18,
+      "logoURI": "https://raw.githubusercontent.com/sentrix-labs/brand-kit/main/exchange/tokenlist-256.png",
+      "tags": ["wrapped"]
+    }
+  ]
+}

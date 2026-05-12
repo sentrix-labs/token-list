@@ -1,0 +1,31 @@
+name: Validate token list
+
+on:
+  pull_request:
+    paths:
+      - 'sentrix.tokenlist.json'
+      - 'schema.json'
+      - '.github/workflows/validate.yml'
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install ajv-cli
+        run: npm install -g ajv-cli@5 ajv-formats@3
+      - name: Validate sentrix.tokenlist.json against Uniswap schema
+        run: |
+          ajv validate \
+            -s schema.json \
+            -d sentrix.tokenlist.json \
+            --strict=false \
+            -c ajv-formats
