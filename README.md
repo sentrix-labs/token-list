@@ -81,6 +81,10 @@ A maintained, versioned, schema-validated list closes both gaps. It's the same p
 - Per-list flavours (e.g. `sentrix-strict.tokenlist.json` for highest-trust, `sentrix-extended.tokenlist.json` for community-submitted)
 - IPFS pinning for tag-pinned URLs
 
+## sUSDC
+
+The official Base USDC -> Sentrix sUSDC asset must only be listed after the Hyperlane Warp Route is deployed and verified. See [`docs/SUSDC_LISTING.md`](docs/SUSDC_LISTING.md) and `examples/susdc.token-entry.template.json`.
+
 ## License
 
 [BSD-3-Clause](./LICENSE) — matches Uniswap's token-lists licence so derivatives can be vendored either direction.
